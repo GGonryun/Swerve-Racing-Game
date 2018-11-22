@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     public int score;
     public int difficulty;
     [SerializeField] private float currentDifficulty;
-    [SerializeField] private float highScore;
+    private float highScore = 0;
     public float HighScore
     {
         get

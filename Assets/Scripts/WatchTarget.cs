@@ -11,7 +11,11 @@ public class WatchTarget : MonoBehaviour {
 
     private void Awake()
     {
-        target = GameObject.FindGameObjectWithTag("Player").transform;
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if(player)
+        {
+            target = player.transform;
+        }
     }
     void Update()
     {

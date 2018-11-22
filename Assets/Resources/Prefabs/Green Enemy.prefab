@@ -25,7 +25,6 @@ GameObject:
   - component: {fileID: 114761638559426828}
   - component: {fileID: 114622852910625900}
   - component: {fileID: 114833700257061804}
-  - component: {fileID: 114764672756768234}
   m_Layer: 0
   m_Name: Green Enemy
   m_TagString: Enemy
@@ -116,18 +115,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   rotationSpeed: 110
---- !u!114 &114764672756768234
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1402974666235776}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7b0b8d2e7c296d4a842689fc719cbc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deathAnimation: {fileID: 0}
 --- !u!114 &114833700257061804
 MonoBehaviour:
   m_ObjectHideFlags: 1

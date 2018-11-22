@@ -6,10 +6,11 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public int score;
-    public float currentDifficulty;
+    public int difficulty;
+    [SerializeField] private float currentDifficulty;
+    [SerializeField] private Transform[] enemies;
     private readonly float spawnTimer = 15f;
     private Coroutine spawner;
-    [SerializeField] private Transform[] enemies;
     private System.Random rnjesus;
 
     private static GameManager _instance;
@@ -36,11 +37,13 @@ public class GameManager : MonoBehaviour
         } 
         DontDestroyOnLoad(_instance);
 
-        rnjesus = new System.Random();
+
     }
 
     public void StartGame()
     {
+        rnjesus = new System.Random();
+        currentDifficulty = difficulty;
         spawner = StartCoroutine(EnemySpawner());
     }
 

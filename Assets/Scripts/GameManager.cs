@@ -6,7 +6,9 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public int score;
-    [SerializeField] private float spawnTimer;
+    public float currentDifficulty;
+    private readonly float spawnTimer = 15f;
+    private Coroutine spawner;
     [SerializeField] private Transform[] enemies;
     private System.Random rnjesus;
 
@@ -35,18 +37,29 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(_instance);
 
         rnjesus = new System.Random();
-        StartCoroutine(EnemySpawner());
+    }
 
+    public void StartGame()
+    {
+        spawner = StartCoroutine(EnemySpawner());
+    }
+
+    public void EndGame()
+    {
+        StopCoroutine(spawner);
     }
 
     private IEnumerator EnemySpawner()
     {
+        yield return new WaitForSeconds(5.0f);
+
         while(true)
         {
-            yield return new WaitForSeconds(spawnTimer);
+            yield return new WaitForSeconds(spawnTimer/currentDifficulty);
             int random = rnjesus.Next(1, 4);
             GameObject newEnemy = SelectEnemy(random);
             SpawnEnemy(newEnemy);
+            currentDifficulty = Mathf.Clamp(currentDifficulty+.10f, 1f, 15f);
         }
     }
 

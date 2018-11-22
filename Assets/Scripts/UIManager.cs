@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour {
     [SerializeField] private GameObject gameOverScreen;
@@ -26,17 +27,24 @@ public class UIManager : MonoBehaviour {
             _instance = this;
 
         }
-        DontDestroyOnLoad(_instance);
-
 
     }
-
-	void Update () {
-		
-	}
 
     public void displayGameOverScreen()
     {
         gameOverScreen.SetActive(true);
+    }
+
+    public void RestartGame()
+    {
+      
+            GameManager.instance.StartGame();
+            SceneManager.LoadScene("GameScene");
+    }
+
+    public void ReturnToMenu()
+    {
+
+        SceneManager.LoadScene("OpeningScene");
     }
 }

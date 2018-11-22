@@ -52,8 +52,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
-  difficulty: 5
-  currentDifficulty: 5
+  difficulty: 1
+  currentDifficulty: 0
+  highScore: 0
   enemies:
   - {fileID: 4442360585486932, guid: c35cd71594e92f04e91de53b663fdea2, type: 2}
   - {fileID: 4479928745508312, guid: 284d5ab34200c6745b03895579205b18, type: 2}

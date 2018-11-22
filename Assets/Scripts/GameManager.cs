@@ -51,15 +51,22 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
-        rnjesus = new System.Random();
+        score = 0;
         currentDifficulty = difficulty;
+        rnjesus = new System.Random();
         spawner = StartCoroutine(EnemySpawner());
 
     }
 
     public void EndGame()
     {
+        if(score > highScore)
+        {
+            highScore = score;
+        }
+
         StopCoroutine(spawner);
+
     }
 
     private IEnumerator EnemySpawner()

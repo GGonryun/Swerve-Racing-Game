@@ -25,13 +25,14 @@ GameObject:
   - component: {fileID: 114206740783676900}
   - component: {fileID: 114977778886055810}
   - component: {fileID: 114843720650263434}
+  - component: {fileID: 114842025991061732}
   m_Layer: 0
   m_Name: Red Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4025603285499504
 Transform:
   m_ObjectHideFlags: 1
@@ -102,7 +103,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  rotationSpeed: 100
+  rotationSpeed: 90
+--- !u!114 &114842025991061732
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1958794872005000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7b0b8d2e7c296d4a842689fc719cbc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathAnimation: {fileID: 0}
 --- !u!114 &114843720650263434
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -114,7 +127,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbc2c03e70e58ff49860c0e39071b92e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bc: {fileID: 0}
   enemies:
   - Enemy
   - Environ
@@ -129,7 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ca2b05cb089a994483573c1c2c7f3de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  linearSpeed: 10
+  linearSpeed: 14
 --- !u!212 &212733177505978848
 SpriteRenderer:
   m_ObjectHideFlags: 1

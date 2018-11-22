@@ -25,13 +25,14 @@ GameObject:
   - component: {fileID: 114553931384565348}
   - component: {fileID: 114869452692793130}
   - component: {fileID: 114542532761151096}
+  - component: {fileID: 114282368337832866}
   m_Layer: 0
   m_Name: Yellow Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4664362008457846
 Transform:
   m_ObjectHideFlags: 1
@@ -90,6 +91,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.4, y: 0.7}
   m_EdgeRadius: 0
+--- !u!114 &114282368337832866
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1593584268380078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7b0b8d2e7c296d4a842689fc719cbc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathAnimation: {fileID: 0}
 --- !u!114 &114542532761151096
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -101,7 +114,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbc2c03e70e58ff49860c0e39071b92e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bc: {fileID: 0}
   enemies:
   - Enemy
   - Environ
@@ -129,7 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ca2b05cb089a994483573c1c2c7f3de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  linearSpeed: 6.3
+  linearSpeed: 8
 --- !u!212 &212965448191842300
 SpriteRenderer:
   m_ObjectHideFlags: 1

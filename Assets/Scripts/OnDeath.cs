@@ -3,14 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class OnDeath : MonoBehaviour {
+    [SerializeField] private GameObject deathAnimation;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    private void OnDisable()
+    {
+        Instantiate(Resources.Load("Prefabs/Explosion"),gameObject.transform.position,gameObject.transform.rotation);
+    }
 }

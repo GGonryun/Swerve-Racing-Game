@@ -9,6 +9,10 @@ public class WatchTarget : MonoBehaviour {
     private Quaternion ourRotation, targetRotation;
     private Vector3 displacement;
 
+    private void Awake()
+    {
+        target = GameObject.FindGameObjectWithTag("Player").transform;
+    }
     void Update()
     {
         if(target)

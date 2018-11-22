@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-[RequireComponent(typeof(BoxCollider2D))]
+
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float rotationSpeed;

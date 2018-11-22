@@ -7,6 +7,7 @@ public class LoadGame : MonoBehaviour {
     [SerializeField] private GameManager gm;
 
 	void Start () {
+        DontDestroyOnLoad(this);
         Instantiate(gm);
 	}
     
@@ -17,6 +18,9 @@ public class LoadGame : MonoBehaviour {
 
     public void StartGame()
     {
+        GameManager.instance.StartGame();
         SceneManager.LoadScene("GameScene");
+
     }
+
 }

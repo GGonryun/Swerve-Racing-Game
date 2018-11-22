@@ -8,6 +8,15 @@ public class GameManager : MonoBehaviour
     public int score;
     public int difficulty;
     [SerializeField] private float currentDifficulty;
+    [SerializeField] private float highScore;
+    public float HighScore
+    {
+        get
+        {
+            return highScore;
+        }
+    }
+
     [SerializeField] private Transform[] enemies;
     private readonly float spawnTimer = 15f;
     private Coroutine spawner;
@@ -36,7 +45,7 @@ public class GameManager : MonoBehaviour
             
         } 
         DontDestroyOnLoad(_instance);
-
+        
 
     }
 
@@ -45,6 +54,7 @@ public class GameManager : MonoBehaviour
         rnjesus = new System.Random();
         currentDifficulty = difficulty;
         spawner = StartCoroutine(EnemySpawner());
+
     }
 
     public void EndGame()

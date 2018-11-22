@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float rotationSpeed;
+    
 
     private void OnDisable()
     {
@@ -20,7 +21,7 @@ public class PlayerController : MonoBehaviour
 
     void GameOver()
     {
-
-        Debug.Log("Game!");
+        GameManager.instance.EndGame();
+        UIManager.instance.displayGameOverScreen();
     }
 }

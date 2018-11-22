@@ -4,11 +4,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(BoxCollider2D), typeof(Rigidbody2D))]
 public class DestroyOnContact : MonoBehaviour {
-    [SerializeField] private BoxCollider2D bc;
     [SerializeField] private string[] enemies;
-    private void Awake() {
-        bc = GetComponent<BoxCollider2D>();
-    }
 
     private void OnTriggerEnter2D(Collider2D collision) {
 

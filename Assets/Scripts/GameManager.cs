@@ -2,15 +2,44 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour {
+public class GameManager : MonoBehaviour
+{
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    [SerializeField] private float spawnTimer;
+    [SerializeField] private Transform[] enemies;
+
+    private static GameManager _instance;
+
+    public static GameManager instance
+    {
+        get
+        {
+            return _instance;
+        }
+    }
+
+
+    private void Awake()
+    {
+        if(_instance != null && _instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+        else if (_instance != this)
+        {
+            _instance = this;
+            
+        } 
+        DontDestroyOnLoad(_instance);
+   
+    }
+
+    private IEnumerator SpawnEnemy()
+    {
+        while(true)
+        {
+            yield return new WaitForSeconds(spawnTimer);
+            Debug.Log("create enemy");
+        }
+    }
 }

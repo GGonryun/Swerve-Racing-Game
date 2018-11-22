@@ -6,6 +6,11 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float rotationSpeed;
 
+    private void OnDisable()
+    {
+        GameOver();
+    }
+
     void Update()
     {
         float rotation = Input.GetAxis("Horizontal") * rotationSpeed;
@@ -13,4 +18,9 @@ public class PlayerController : MonoBehaviour
         transform.Rotate(0, 0, -rotation);
     }
 
+    void GameOver()
+    {
+
+        Debug.Log("Game!");
+    }
 }

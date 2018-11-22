@@ -10,7 +10,10 @@ public class FollowTarget : MonoBehaviour
 
     private void FixedUpdate()
     {
-        targetPosition = new Vector3(target.position.x + offset.x, target.position.y + offset.y, offset.z);
-        transform.position = Vector3.Lerp(transform.position, targetPosition,Time.deltaTime);
+        if(target)
+        {
+            targetPosition = new Vector3(target.position.x + offset.x, target.position.y + offset.y, offset.z);
+            transform.position = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime);
+        }
     }
 }

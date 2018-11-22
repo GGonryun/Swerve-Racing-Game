@@ -11,9 +11,12 @@ public class WatchTarget : MonoBehaviour {
 
     void Update()
     {
-        displacement = target.position - transform.position;
-        targetRotation = Quaternion.LookRotation(Vector3.forward, displacement);
-        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed/100 * Time.deltaTime);
+        if(target)
+        {
+            displacement = target.position - transform.position;
+            targetRotation = Quaternion.LookRotation(Vector3.forward, displacement);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed / 100 * Time.deltaTime);
+        }
     }
 
 }

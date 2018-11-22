@@ -11,9 +11,10 @@ public class DestroyOnContact : MonoBehaviour {
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
+
         for(int i = 0; i < enemies.Length; i++) {
             if(collision.tag == enemies[i]) {
-                Debug.Log("Explode!");
+                Destroy(gameObject);
             }
         }
     }

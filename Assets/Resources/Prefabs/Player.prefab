@@ -21,11 +21,13 @@ GameObject:
   - component: {fileID: 4080458803514466}
   - component: {fileID: 212739555910495092}
   - component: {fileID: 61118091816118062}
+  - component: {fileID: 50219472685130424}
   - component: {fileID: 114797834779344424}
   - component: {fileID: 114727098248896602}
+  - component: {fileID: 114157089280810570}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36,13 +38,33 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1927779219644164}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.7, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0.08515608, w: 0.99636763}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 9.77}
+--- !u!50 &50219472685130424
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1927779219644164}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!61 &61118091816118062
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -52,7 +74,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -68,6 +90,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.4, y: 0.7}
   m_EdgeRadius: 0
+--- !u!114 &114157089280810570
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1927779219644164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbc2c03e70e58ff49860c0e39071b92e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemies:
+  - Enemy
+  - Environ
 --- !u!114 &114727098248896602
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -79,7 +115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ca2b05cb089a994483573c1c2c7f3de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  linearSpeed: 5
+  linearSpeed: 6
 --- !u!114 &114797834779344424
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -91,7 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00acb775d9af90f4c97026b8be2530c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 100
+  rotationSpeed: 125
 --- !u!212 &212739555910495092
 SpriteRenderer:
   m_ObjectHideFlags: 1

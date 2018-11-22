@@ -10,6 +10,8 @@ public class DestroyOnContact : MonoBehaviour {
 
         for(int i = 0; i < enemies.Length; i++) {
             if(collision.tag == enemies[i]) {
+                GameManager.instance.score++;
+                Instantiate(Resources.Load("Prefabs/Explosion"), gameObject.transform.position, gameObject.transform.rotation);
                 Destroy(gameObject);
             }
         }

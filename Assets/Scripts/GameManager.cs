@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-
+    public int score;
     [SerializeField] private float spawnTimer;
     [SerializeField] private Transform[] enemies;
     private System.Random rnjesus;

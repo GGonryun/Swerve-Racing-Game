@@ -102,7 +102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  rotationSpeed: 90
+  rotationSpeed: 100
 --- !u!114 &114843720650263434
 MonoBehaviour:
   m_ObjectHideFlags: 1

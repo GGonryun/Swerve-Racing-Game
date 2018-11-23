@@ -76,10 +76,11 @@ public class GameManager : MonoBehaviour
         while(true)
         {
             yield return new WaitForSeconds(spawnTimer/currentDifficulty);
-            int random = rnjesus.Next(1, 4);
+            int random = rnjesus.Next(1, 5);
+            Debug.Log(random);
             GameObject newEnemy = SelectEnemy(random);
             SpawnEnemy(newEnemy);
-            currentDifficulty = Mathf.Clamp(currentDifficulty+.10f, 1f, 15f);
+            currentDifficulty = Mathf.Clamp(currentDifficulty+.15f, 1f, 30f);
         }
     }
 
@@ -91,9 +92,8 @@ public class GameManager : MonoBehaviour
         who.transform.position = newPosition;
         who.transform.eulerAngles = newRotation;
         who.SetActive(true);
-
-
     }
+
     private GameObject SelectEnemy(int who)
     {
         switch (who)

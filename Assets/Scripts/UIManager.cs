@@ -53,17 +53,4 @@ public class UIManager : MonoBehaviour {
         topBar.SetActive(false);
         gameOverScreen.SetActive(true);
     }
-
-    public void RestartGame()
-    {
-      
-            GameManager.instance.StartGame();
-            SceneManager.LoadScene("GameScene");
-    }
-
-    public void ReturnToMenu()
-    {
-
-        SceneManager.LoadScene("OpeningScene");
-    }
 }

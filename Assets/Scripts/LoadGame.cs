@@ -23,11 +23,4 @@ public class LoadGame : MonoBehaviour {
         GameManager.instance.difficulty = i;
     }
 
-    public void StartGame()
-    {
-        GameManager.instance.StartGame();
-        SceneManager.LoadScene("GameScene");
-
-    }
-
 }

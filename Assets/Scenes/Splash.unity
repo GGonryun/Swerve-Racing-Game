@@ -302,7 +302,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Medium
+  m_Text: Easy
 --- !u!222 &526888386
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -322,7 +322,7 @@ GameObject:
   - component: {fileID: 546101382}
   - component: {fileID: 546101381}
   m_Layer: 0
-  m_Name: Easy
+  m_Name: Training
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -522,7 +522,7 @@ GameObject:
   - component: {fileID: 662884217}
   - component: {fileID: 662884216}
   m_Layer: 0
-  m_Name: Hard
+  m_Name: Normal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -592,7 +592,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 5
+          m_IntArgument: 7
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1039,7 +1039,7 @@ GameObject:
   - component: {fileID: 1009943990}
   - component: {fileID: 1009943989}
   m_Layer: 0
-  m_Name: Medium
+  m_Name: Easy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1109,7 +1109,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
+          m_IntArgument: 5
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1570,7 +1570,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Hard
+  m_Text: Normal
 --- !u!222 &1628199703
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1645,7 +1645,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Easy
+  m_Text: Training
 --- !u!222 &1660416654
 CanvasRenderer:
   m_ObjectHideFlags: 0

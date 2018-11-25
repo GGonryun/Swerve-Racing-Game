@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4908811823841792}
   - component: {fileID: 212574391437260446}
   - component: {fileID: 61168759498251118}
+  - component: {fileID: 114818483959980500}
   - component: {fileID: 82686493718241418}
   - component: {fileID: 50775741831671962}
   m_Layer: 0
@@ -54,7 +55,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1000
+  m_Mass: 100
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 0
@@ -99,7 +100,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: da8e45060e3fc8641988cdc5657dcda8, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.67
+  m_Volume: 0.42
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -183,6 +184,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &114818483959980500
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1086921552257902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2f6919631952604186c50e9fb51572d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212574391437260446
 SpriteRenderer:
   m_ObjectHideFlags: 1

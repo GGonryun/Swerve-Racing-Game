@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class LinearMovement : MonoBehaviour {
-    [SerializeField] private float linearSpeed;
 
+    [SerializeField] private float linearSpeed;
     void FixedUpdate() {
         float translation = linearSpeed;
         translation *= Time.deltaTime;

@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class WatchTarget : MonoBehaviour {
 
-    [SerializeField] private Transform target;
     [SerializeField] private float rotationSpeed;
+    private Transform target;
     private Quaternion ourRotation, targetRotation;
     private Vector3 displacement;
 

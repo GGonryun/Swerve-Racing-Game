@@ -6,8 +6,8 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float rotationSpeed;
     private float screenCenterX;
-
-    private void OnDisable()
+ 
+    void OnDisable()
     {
         GameOver();
     }
@@ -15,9 +15,12 @@ public class PlayerController : MonoBehaviour
 #if UNITY_STANDALONE || UNITY_WEBPLAYER
     void Update()
     {
-        float rotation = Input.GetAxis("Horizontal") * rotationSpeed;
-        rotation *= Time.deltaTime;
-        transform.Rotate(0, 0, -rotation);
+        float pressed = Input.GetAxis("Horizontal");
+        if(pressed > 0.00001 || pressed < -0.00001) {
+            float rotation = pressed * rotationSpeed;
+            rotation *= Time.deltaTime;
+            transform.Rotate(0, 0, -rotation);
+        }
     }
 #elif UNITY_IOS || UNITY_ANDROID || UNITY_WP8 || UNITY_IPHONE
     private void Awake()

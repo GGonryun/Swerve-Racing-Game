@@ -12,7 +12,7 @@ Explosions: https://www.audiomicro.com/
 
 Background Music: https://www.bensound.com/
 
-Screeching Car: http://soundbible.com/
+Screeching Car, Cow, & Duck Sounds: http://soundbible.com/
 
 ### Artwork:
 General Sprites & Cars: https://kenney.nl/
